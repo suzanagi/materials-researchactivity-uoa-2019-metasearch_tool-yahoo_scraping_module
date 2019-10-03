@@ -24,9 +24,9 @@ def search(query):
 # Main Function
 if __name__ == "__main__":
     # Prepare query variable
-    query = ""
+    query = sys.argv[1]
     # Append multiple query words with "+"
-    for arg in sys.argv[1:]:
+    for arg in sys.argv[2:]:
         query = query + "+" + arg
     # Experiment the search function
     result = search(query)
