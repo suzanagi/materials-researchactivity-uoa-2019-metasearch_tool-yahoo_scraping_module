@@ -1,2 +1,2 @@
-import yahoo_search_module
-import result_item
+from . import yahoo_search_module
+from . import result_item
