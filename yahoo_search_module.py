@@ -17,7 +17,7 @@ def search(query):
     abstract = soup.find_all("p", attrs={"lh-16"})
     # Put the results in the list to be returned
     for title in topics:
-        result.append(ResultItem(title.text, title.attrs['href']))
+        result.append(ResultItem(title.text, title.attrs['href'], "Yahoo!"))
     # Return the result list
     return result
 
