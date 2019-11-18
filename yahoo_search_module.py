@@ -16,8 +16,12 @@ def search(query):
     topics = soup.find_all("a", attrs={"ac-algo", "fz-l"})
     abstract = soup.find_all("p", attrs={"lh-16"})
     # Put the results in the list to be returned
+    rank = 1
     for title in topics:
-        result.append(ResultItem(title.text, title.attrs['href'], "Yahoo!"))
+        r_item = ResultItem(title.text, title.attrs['href'], "Yahoo!")
+        r_item.add_rank(rank)
+        result.append(r_item)
+        rank++
     # Return the result list
     return result
 
