@@ -21,7 +21,7 @@ def search(query):
         r_item = ResultItem(title.text, title.attrs['href'], "Yahoo!")
         r_item.add_rank(rank)
         result.append(r_item)
-        rank++
+        rank += 1
     # Return the result list
     return result
 
@@ -38,3 +38,5 @@ if __name__ == "__main__":
     for item in result:
         print("[title] "+item.title)
         print("[url] "+item.url)
+        print("[rank] "+str(item.rank))
+        print("\n")
